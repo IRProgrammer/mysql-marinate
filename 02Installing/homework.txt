@@ -2,18 +2,31 @@ Homework for Chapter 2 of Learning MySQL (2006 edition), from p. 94:
 
 Exercises:
 1) What is command completion?
-
+Command completion finishes the commands you're typing based on what you've already typed.
+Makes typing a long strings of commands or traversing directory trees easier.
 2) What are the relative advantages of installing MySQL using the package,
  directory archive (tarball or "no-install", or compiled methods?
-
+When I'm working with Linux systems, I like using the package manager, because it will grab the
+most recent distribution so you have the most updated system.  With the no-install options, you have
+a working installation all ready to go, just drop it in your file system and go.
 3) How do you verify the integrity of downloaded packages?
-
+With *nix, I check the hash using the MD5 command.  If you're using Win*, you can use the Version Id Check tool.
+Same results, different tools.
 4) How do you add the MySQL bin directory to the operating system path?
-
+Use the 'path' command or manually edit configuration files.
 Additional Exercises (not in the book): 
 1) Document how you installed MySQL and any issues you came across with installation. 
  (The goal is to be easy to install it again on a similar machine.)
-
+I have two separate MySQL installations.  I have a Windows box that I installed XAMPP using the no-install option.
+The windows install was fairly simple, but I don't want to use it for production.  I did have some problems getting
+the mysqld client program working, but I didn't have my path set properly.  When I tried the 'path' command, I
+misplaced some characters.  I fixed it by opening the environment variables and fixing it that way.
+I also installed an Ubuntu 12.04 server on a Virtual Box.  For this installation, I used the package manager
+'apt-get' installation.  The only problem I had with this was accessing the server from outside of the 
+virtual environment.  I can access the phpMyAdmin controller without an issue, but when I use a mysqld.exe to 
+access using command line, no luck.  If I log in to the VM, I can access the server using the command line.  Still
+working on that issue.
 2) Document where important files should be.
-
+The server installation files are in the XAMPP/MySQL/ folder.
+The Virtual Machine has the database server installation files as /usr/share/mysql.
 Do not forget to do a pull request when your homework is complete.
